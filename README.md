@@ -9,6 +9,8 @@ L’objectif est de répartir les requêtes HTTP entrantes entre deux serveurs N
 - une distribution équilibrée du trafic,
 - et une meilleure tolérance aux pannes.
 
+Il a été réalisé par Martial FOUSSET et Nathan TOÏGO.
+
 ## ⚙️ Architecture du projet
 
 ```
@@ -121,3 +123,4 @@ Ce projet illustre comment :
 - distribuer le trafic entre plusieurs serveurs Node.js,
 - conteneuriser et orchestrer le tout avec Docker,
 - surveiller et tester le comportement du système.
+
