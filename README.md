@@ -12,13 +12,13 @@ L’objectif est de répartir les requêtes HTTP entrantes entre deux serveurs N
 ## ⚙️ Architecture du projet
 
 ```
-.
+LoadBalancing/
 ├── docker-compose.yml
-├── Dockerfile
-├── haproxy.cfg
-├── Makefile
-├── nodeServer1.js
-└── nodeServer2.js
+├── haproxy/
+│   └── haproxy.cfg
+└── node/
+    ├── server1.js
+    └── server2.js
 ```
 
 ### 🔧 Composants
@@ -31,7 +31,7 @@ L’objectif est de répartir les requêtes HTTP entrantes entre deux serveurs N
 
 ## 🧱 Structure Docker
 
-### 🔹 Fichier `Dockerfile`
+### Fichier `Dockerfile`
 Ce fichier décrit comment construire l’image Node.js utilisée pour les serveurs :
 ```Dockerfile
 FROM node:22-alpine
