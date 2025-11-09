@@ -7,8 +7,6 @@ services:
     command: ["node", "nodeServer1.js"]
     expose:
       - "3000"
-    networks:
-      - lbnet
 
   node2:
     build:
@@ -18,8 +16,7 @@ services:
     command: ["node", "nodeServer2.js"]
     expose:
       - "3001"
-    networks:
-      - lbnet
+
 
   haproxy:
     image: haproxy:2.8
@@ -32,9 +29,3 @@ services:
       - "8404:8404"
     volumes:
       - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
-    networks:
-      - lbnet
-
-networks:
-  lbnet:
-    driver: bridge
